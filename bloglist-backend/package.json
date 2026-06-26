@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "run": "NODE_ENV=production node index.js",
-    "dev": "NODE_ENV=development node --watch index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test node --test",
     "start:test": "NODE_ENV=test node index.js"
   },
@@ -12,7 +12,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
@@ -21,6 +21,7 @@
     "supertest": "^7.1.0"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "prettier": "3.6.2"
   }
 }
