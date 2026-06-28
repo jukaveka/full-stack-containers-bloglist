@@ -6,3 +6,11 @@ services:
     ports:
       - 5173:80
     container_name: bloglist-frontend-prod
+
+  server:
+    build:
+      context: bloglist-backend
+      dockerfile: prod.Dockerfile
+    ports:
+      - 3003:3003
+    container_name: bloglist-backend-prod
