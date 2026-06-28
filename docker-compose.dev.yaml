@@ -28,3 +28,19 @@ services:
       - app
       - server
     container_name: bloglist-nginx-dev
+
+  mongo:
+    image: mongo:8.3.4-noble
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: the_username
+      MONGO_INITDB_ROOT_PASSWORD: the_password
+      MONGO_INITDB_DATABASE: the_database
+    volumes:
+      - ./bloglist-backend/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - mongo_data:/data/db
+    container_name: todo-backend-mongo
+
+volumes:
+  mongo_data:
