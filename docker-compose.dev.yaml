@@ -40,7 +40,7 @@ services:
     volumes:
       - ./bloglist-backend/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       - mongo_data:/data/db
-    container_name: todo-backend-mongo
+    container_name: bloglist-mongo-dev
 
 volumes:
   mongo_data:
