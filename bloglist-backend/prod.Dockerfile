@@ -5,5 +5,4 @@ RUN npm install --omit=dev
 COPY . .
 RUN chown -R node:node .
 USER node
-EXPOSE 3003
 CMD ["npm", "run", "prod"]
