@@ -1,0 +1,12 @@
+@username = TODO_username
+@name = TODO_name
+@password = TODO_password
+
+POST http://localhost:8080/api/users/
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "name": "{{name}}",
+  "password": "{{password}}"
+}
